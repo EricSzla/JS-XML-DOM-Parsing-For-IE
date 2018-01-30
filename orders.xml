@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<ORDERS>
+	<ORDER>
+		<ID>1233</ID>
+		<PERSON>John Somera</PERSON>
+		<SHIPTO>
+			<NAME>Peter McNot</NAME>
+			<ADDRESS1>4</ADDRESS1>
+			<ADDRESS2>Kevin St.</ADDRESS2>
+			<ADDRESS3>DUBLIN 6</ADDRESS3>
+			<CITY>DUBLIN</CITY>
+			<COUNTRY>IRELAND</COUNTRY>
+		</SHIPTO>
+
+		<ITEMS>
+			<ITEM>
+				<TITLE>CD</TITLE>
+				<ID>54234</ID>
+				<QUANTITY>5</QUANTITY>
+				<PRICE>12.99</PRICE>
+			</ITEM>
+			<ITEM>
+				<TITLE>CD</TITLE>
+				<ID>54234</ID>
+				<QUANTITY>5</QUANTITY>
+				<PRICE>12.99</PRICE>
+			</ITEM>
+			<ITEM>
+				<TITLE>CD</TITLE>
+				<ID>54234</ID>
+				<QUANTITY>5</QUANTITY>
+				<PRICE>12.99</PRICE>
+			</ITEM>
+		</ITEMS>
+
+
+	</ORDER>
+
+<ORDER>
+		<ID>1234</ID>
+		<PERSON>Pet Wonder</PERSON>
+		<SHIPTO>
+			<NAME>Damian McDonald</NAME>
+			<ADDRESS1>4</ADDRESS1>
+			<ADDRESS2>Kevin St.</ADDRESS2>
+			<ADDRESS3>DUBLIN 6</ADDRESS3>
+			<CITY>DUBLIN</CITY>
+			<COUNTRY>IRELAND</COUNTRY>
+		</SHIPTO>
+
+		<ITEMS>
+			<ITEM>
+				<TITLE>CD</TITLE>
+				<ID>54234</ID>
+				<QUANTITY>5</QUANTITY>
+				<PRICE>12.99</PRICE>
+			</ITEM>
+			<ITEM>
+				<TITLE>CD</TITLE>
+				<ID>54234</ID>
+				<QUANTITY>5</QUANTITY>
+				<PRICE>12.99</PRICE>
+			</ITEM>
+			<ITEM>
+				<TITLE>CD</TITLE>
+				<ID>54234</ID>
+				<QUANTITY>5</QUANTITY>
+				<PRICE>12.99</PRICE>
+			</ITEM>
+		</ITEMS>
+
+
+	</ORDER>
+</ORDERS>

@@ -1,0 +1,62 @@
+<html>
+
+    <script type='text/javascript'>
+    
+        var doc = new ActiveXObject("Microsoft.XMLDOM");
+        doc.async = false;
+        doc.load("orders.xml");
+        var error = doc.parseError;
+        
+        if(error != ""){
+            alert(error.reason);
+        }
+        
+        document.write ("<b>XML Root tag name: " + doc.documentElement.tagName + "</b>");
+        
+        var rootChildren = doc.documentElement.childNodes;
+        var orderTotal = 0.00;
+		
+		// Iterate through ALL orders
+		for(i=0; i < rootChildren.length; i++){
+			var orderValues = rootChildren[i].childNodes;
+			document.write("</br></br>*******************************");
+			document.write("</br>" + rootChildren[i].tagName + ": <b>" + (i+1) +"</b></br>");
+			
+			var ID = orderValues[0].childNodes;
+			var NAME = orderValues[1].childNodes;
+			var SHIPTO = orderValues[2].childNodes;
+			var ITEMS = orderValues[3].childNodes;
+			
+			document.write("--------------------------------------</br>");
+			document.write(orderValues[0].tagName + ": <b>" + ID[0].nodeValue + "</b></br>");
+			document.write(orderValues[1].tagName + ": <b>" + NAME[0].nodeValue + "</b></br>");
+			document.write("--------------------------------------</br>");
+			// SHIPTO HEADER
+			document.write("<b>" + orderValues[2].tagName + "</b></br></br>");
+			// Print out the SHIPTO elements
+			for(j = 0; j < SHIPTO.length; j++){
+				document.write(SHIPTO[j].tagName + ": <b>" + SHIPTO[j].firstChild.nodeValue + "</b></br>");
+			}
+			document.write("--------------------------------------</br>");
+			// ITEMS HEADER
+			document.write("<b>" + orderValues[3].tagName + "</b></br></br>");
+			// Iterate through the ITEMS elements
+			for(j = 0; j < ITEMS.length;j++){
+				// Receive individual item
+				var item = ITEMS[j].childNodes;
+				// Print out item's values
+				for (k = 0; k < item.length;k++){
+					document.write(item[k].tagName + ": <b>" + item[k].firstChild.nodeValue + "</b></br>");
+				}
+				if(j != ITEMS.length-1){
+					document.write("------------------------</br>");
+				}
+			}
+			document.write("--------------------------------------</br>");
+		}
+        
+        
+    </script>
+
+
+</html>
