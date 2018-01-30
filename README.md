@@ -1,2 +1,2 @@
 # XML-DOM-Parsing-For-IE
-XML Parsing for Internet Explorer using DOM
+DOM XML Parsing for Internet Explorer using JavaScript
